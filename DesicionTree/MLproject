@@ -1,0 +1,9 @@
+name: BayesQ28
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+       maxCategories: {type: int, default: 0}
+    command: "python DesicionTree.py --maxCategories {maxCategories}"

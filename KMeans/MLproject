@@ -1,0 +1,16 @@
+name: KMeans
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      k: {type: int, default: 0}
+      maxIter: {type: int, default: 0}
+      initSteps: {type: int, default: 0}
+      tol: {type: int, default: 0}
+    command: "python KMeans.py --k {k}
+                              --maxIter {maxIter}
+                              --initSteps {initSteps}
+                              --tol {tol}"
+

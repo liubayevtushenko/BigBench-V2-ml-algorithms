@@ -1,0 +1,16 @@
+name: SVC
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      maxIter: {type: int, default: 0}
+      regParam: {type: double, default: 0}
+      tol: {type: double, default: 0}
+      aggregationDepth: {type: int, default: 0}
+    command: "python SVC.py --maxIter {maxIter}
+                              --regParam {regParam}
+                              --tol {tol}
+                              --aggregationDepth {aggregationDepth}"
+

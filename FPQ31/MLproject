@@ -1,0 +1,14 @@
+name: FGQ31
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      numPartitions: {type: int, default: 0}
+      minSupport: {type: double, default: 0}
+      minConfidence: {type: double, default: 0}
+    command: "python fgQ31.py --numPartitions {numPartitions}
+                              --minSupport {minSupport}
+                              --minConfidence {minConfidence}"
+

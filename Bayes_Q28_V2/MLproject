@@ -1,0 +1,12 @@
+name: BayesQ28
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      smoothing: {type: decimal(7,5), default: 0}
+      modelType: {type: string, default: 0}
+    command: "python BayesQ28.py --smoothing {smoothing}
+                              --modelType {modelType}"
+

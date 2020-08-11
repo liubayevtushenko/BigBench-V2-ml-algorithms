@@ -1,0 +1,14 @@
+name: MultilayerPerceptron
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      seed: {type: long, default: 0}
+      blockSize: {type: double, default: 0}
+      maxIter: {type: int, default: 0}
+    command: "python MLP.py --seed {seed}
+                             --blockSize {blockSize}
+                              --maxIter {maxIter}"
+

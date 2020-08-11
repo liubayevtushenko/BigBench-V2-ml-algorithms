@@ -1,0 +1,14 @@
+name: GMM
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      k: {type: int, default: 0}
+      maxIter: {type: int, default: 0}
+      tol: {type: decimal(7,5), default: 0}
+    command: "python GMM.py --k {k}
+                              --maxIter {maxIter}
+                              --tol {tol}"
+

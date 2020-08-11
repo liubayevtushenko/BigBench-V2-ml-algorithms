@@ -1,0 +1,9 @@
+
+ 
+
+Create view web_clickstream  as
+
+Select wl_customer_id, i_category_id from items (select from web_logs lateral view json_tuple
+
+(web_logs.line, wl_customer_id, wl_item_id) js  as wl_customer_id, wl_item_id
+Where wl_customer_id is not NULL  and wl_items_id=i_items_id

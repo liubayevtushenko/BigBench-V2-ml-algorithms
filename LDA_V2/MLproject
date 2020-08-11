@@ -1,0 +1,12 @@
+name: LDA
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      maxIter: {type: int, default: 0}
+      k:  {type: int, default: 0}
+    command: "python LDA.py --maxIter {maxIter}
+                              --k {k} "
+

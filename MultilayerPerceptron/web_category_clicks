@@ -1,0 +1,30 @@
+
+ 
+
+Create table category_clicks  as
+
+Select wl_customer_id, 
+ sum(case when i_category_id=0 then 1 else 0 end) as clicks_in_0,
+ sum(case when i_category_id=1 then 1 else 0 end) as clicks_in_1,
+sum(case when i_category_id=2 then 1 else 0 end) as clicks_in_2,
+sum(case when i_category_id=3 then 1 else 0 end) as clicks_in_3,
+sum(case when i_category_id=4 then 1 else 0 end) as clicks_in_4,
+sum(case when i_category_id=5 then 1 else 0 end) as clicks_in_5,
+sum(case when i_category_id=6 then 1 else 0 end) as clicks_in_6,
+sum(case when i_category_id=7 then 1 else 0 end) as clicks_in_7,
+sum(case when i_category_id=8 then 1 else 0 end) as clicks_in_8,
+sum(case when i_category_id=9 then 1 else 0 end) as clicks_in_9,
+sum(case when i_category_id=10 then 1 else 0 end) as clicks_in_10,
+sum(case when i_category_id=11 then 1 else 0 end) as clicks_in_11,
+sum(case when i_category_id=12 then 1 else 0 end) as clicks_in_12,
+sum(case when i_category_id=13 then 1 else 0 end) as clicks_in_13,
+sum(case when i_category_id=14 then 1 else 0 end) as clicks_in_14,
+sum(case when i_category_id=15 then 1 else 0 end) as clicks_in_15,
+sum(case when i_category_id=16 then 1 else 0 end) as clicks_in_16,
+sum(case when i_category_id=17 then 1 else 0 end) as clicks_in_17,
+sum(case when i_category_id=18 then 1 else 0 end) as clicks_in_18,
+sum(case when i_category_id=19 then 1 else 0 end) as clicks_in_19
+ from web_clickstreams
+ group by wl_customer_id;
+
+
